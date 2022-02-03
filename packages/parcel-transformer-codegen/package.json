@@ -1,0 +1,40 @@
+{
+  "name": "parcel-transformer-codegen",
+  "version": "0.15.0",
+  "description": "Adds support for codegen files in Parcel2",
+  "keywords": [
+    "parcel",
+    "transformer",
+    "codegen",
+    "plugin"
+  ],
+  "author": "smapiot",
+  "homepage": "https://piral.io",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engine": {
+    "parcel": "2.x"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/smapiot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smapiot/piral-cli-parcel2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smapiot/piral-cli-parcel2/issues"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@parcel/plugin": "^2.0.0"
+  }
+}
