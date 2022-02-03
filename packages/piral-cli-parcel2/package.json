@@ -35,7 +35,8 @@
     "url": "https://github.com/smapiot/piral-cli-parcel2/issues"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.0.0",

@@ -1,12 +1,12 @@
 [![Piral Logo](https://github.com/smapiot/piral/raw/main/docs/assets/logo.png)](https://piral.io)
 
-# [Piral CLI Parcel2](https://piral.io) &middot; [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/smapiot/piral/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/piral-cli-parcel2.svg?style=flat)](https://www.npmjs.com/package/piral-cli-parcel2) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://jestjs.io) [![Gitter Chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/piral-io/community)
+# [Piral CLI Parcel2](https://piral.io) &middot; [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/smapiot/piral-cli-parcel2/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/piral-cli-parcel2.svg?style=flat)](https://www.npmjs.com/package/piral-cli-parcel2) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://jestjs.io) [![Gitter Chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/piral-io/community)
 
 This plugin enables using [Parcel v2](https://v2.parceljs.org) as the bundler for Piral instances and pilets.
 
 ## Installation
 
-Use your favorite NPM client for the installation:
+Use your favorite npm client for the installation:
 
 ```sh
 npm i piral-cli-parcel2 --save-dev
