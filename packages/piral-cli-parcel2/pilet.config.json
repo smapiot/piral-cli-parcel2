@@ -1,6 +1,10 @@
 {
   "extends": "@parcel/config-default",
+  "transformers": {
+    "*.codegen": ["parcel-transformer-codegen"]
+  },
   "optimizers": {
     "*.js": ["...", "parcel-optimizer-pilet"]
-  }
+  },
+  "runtimes": ["...", "parcel-runtime-pilet"]
 }

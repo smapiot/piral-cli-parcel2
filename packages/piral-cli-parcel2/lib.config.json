@@ -1,0 +1,9 @@
+{
+  "extends": "@parcel/config-default",
+  "optimizers": {
+    "*.js": ["...", "parcel-optimizer-pilet"]
+  },
+  "transformers": {
+    "*.codegen": ["parcel-transformer-codegen"]
+  }
+}

@@ -5,10 +5,12 @@ interface ParcelOptions {
   watch: boolean;
   outFile: string;
   outDir: string;
+  sideBundlers?: Array<Parcel>;
 }
 
 export function runParcel(bundler: Parcel, options: ParcelOptions) {
   const eventEmitter = new EventEmitter();
+  const { sideBundlers = [] } = options;
   const bundle = {
     outFile: `/${options.outFile}`,
     outDir: options.outDir,
@@ -18,28 +20,33 @@ export function runParcel(bundler: Parcel, options: ParcelOptions) {
 
   return Promise.resolve({
     async bundle() {
-      if (options.watch) {
-        await bundler.watch((err, event) => {
-          if (err) {
-            // fatal error
-            throw err;
-          }
+      const promises: Array<Promise<any>> = sideBundlers.map((b) => b.run());
 
-          if (event.type === 'buildSuccess') {
-            // let bundles = event.bundleGraph.getBundles();
-            eventEmitter.emit('end', bundle);
-          } else if (event.type === 'buildFailure') {
-            console.log(event.diagnostics);
-          } else {
-            // should not enter here
-            console.log((event as any).type);
-          }
-        });
-        return bundle;
+      if (options.watch) {
+        promises.push(
+          bundler.watch((err, event) => {
+            if (err) {
+              // fatal error
+              throw err;
+            }
+
+            if (event.type === 'buildSuccess') {
+              // let bundles = event.bundleGraph.getBundles();
+              eventEmitter.emit('end', bundle);
+            } else if (event.type === 'buildFailure') {
+              console.log(event.diagnostics);
+            } else {
+              // should not enter here
+              console.log((event as any).type);
+            }
+          }),
+        );
       } else {
-        await bundler.run();
-        return bundle;
+        promises.push(bundler.run());
       }
+
+      await Promise.all(promises);
+      return bundle;
     },
     onStart(cb) {
       eventEmitter.on('start', cb);

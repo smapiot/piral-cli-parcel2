@@ -4,21 +4,26 @@ The `piral-cli` plugin for using `parcel` (v2) as bundler.
 
 ## Status
 
-- [ ] Pilets (tested / working)
+- [x] Pilets (tested / working)
     - [x] Codegen
-    - [x] Splitting
+    - [x] Bundle Splitting
     - [x] ESM output
-    - [ ] CSS
+    - [x] CSS / SASS
     - [x] Importmap references
-    - [ ] Importmap bundles
+    - [x] Importmap bundles
     - [x] v2 banner
     - [x] tsconfig changes
     - [x] Building
-    - [ ] Debugging
+    - [x] Debugging
 - [ ] Piral instances (tested / working)
     - [x] Codegen
-    - [ ] HTML entry point
-    - [ ] Emulator build
-    - [ ] Release build
-    - [ ] tsconfig changes
+    - [x] HTML entry point
+    - [x] Emulator build
+    - [x] Release build
+    - [x] tsconfig changes
     - [ ] Debugging
+
+Piral instances require changes:
+
+1. `type="module"` in the `<script>` of *index.html*
+2. In the *package.json* we need to include `"@parcel/transformer-js": { "inlineEnvironment": true }`

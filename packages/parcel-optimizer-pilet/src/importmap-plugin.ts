@@ -19,6 +19,8 @@ export default function babelPlugin({ types }): PluginObj {
 
               if (entry) {
                 path.replaceWith(types.stringLiteral((entry as any).requireId || entry.id));
+              } else if (name.startsWith('./') && name.endsWith('.css')) {
+                path.parentPath.remove();
               }
             }
           },

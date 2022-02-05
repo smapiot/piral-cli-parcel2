@@ -28,7 +28,6 @@ async function compile(name: string, options: CodegenOptions) {
 
 export default new Transformer({
   async transform({ asset, options }) {
-    //TODO
     const outDir = options.projectRoot + '/dist';
 
     const result = await compile(asset.filePath, {

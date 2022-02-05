@@ -22,6 +22,7 @@
   "files": [
     "lib",
     "src",
+    "lib.config.json",
     "pilet.config.json",
     "piral.config.json"
   ],
@@ -43,9 +44,11 @@
   "dependencies": {
     "@parcel/core": "^2.2.1",
     "@parcel/config-default": "^2.2.1",
+    "@parcel/reporter-cli": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
+    "parcel-optimizer-pilet": "^0.15.0",
     "parcel-transformer-codegen": "^0.15.0",
-    "parcel-optimizer-pilet": "^0.15.0"
+    "parcel-runtime-pilet": "^0.15.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",

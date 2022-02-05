@@ -9,12 +9,36 @@ const handler: PiralBuildHandler = {
     const port = options.hmr ? await getFreePort(62123) : undefined;
     const bundler = new Parcel({
       entries: options.entryFiles,
-      defaultConfig: require.resolve('../../piral.config.json'),
+      config: require.resolve('../../piral.config.json'),
       hmrOptions: port && { port },
       mode: process.env.NODE_ENV || 'development',
+      shouldContentHash: options.contentHash,
+      shouldPatchConsole: false,
+      serveOptions: false,
+      shouldProfile: undefined,
+      shouldBuildLazily: undefined,
+      shouldAutoInstall: true,
+      additionalReporters: [
+        {
+          packageName: '@parcel/reporter-cli',
+          resolveFrom: __filename,
+        },
+      ],
       defaultTargetOptions: {
-        isLibrary: false,
-        distDir: options.outDir,
+          shouldOptimize: options.minify,
+          sourceMaps: options.sourceMaps,
+          shouldScopeHoist: true,
+          publicUrl: options.publicUrl,
+          distDir: undefined,
+      },
+      targets: {
+        app: {
+          context: 'browser',
+          outputFormat: 'commonjs',
+          distDir: options.outDir,
+          distEntry: options.outFile,
+          isLibrary: false,
+        }
       },
       logLevel: getLevel(options.logLevel),
     });

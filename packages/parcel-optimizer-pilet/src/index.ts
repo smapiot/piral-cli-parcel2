@@ -4,7 +4,7 @@ import SourceMap from '@parcel/source-map';
 import { transformAsync } from '@babel/core';
 
 export default new Optimizer({
-  async optimize({ contents, map, bundle, options }) {
+  async optimize({ contents, map, bundle, getSourceMapReference }) {
     const entry = bundle.getMainEntry();
     const path = entry.filePath;
     const name = process.env.BUILD_PCKG_NAME;
@@ -51,6 +51,10 @@ export default new Optimizer({
 
     const sourceMap = new SourceMap();
     sourceMap.addVLQMap(result.map);
+
+    // Add source map reference to compiled code
+    const url = await getSourceMapReference(sourceMap);
+    result.code += `\n//# sourceMappingURL=${url}\n`;
 
     return { contents: result.code, map: sourceMap };
   },
