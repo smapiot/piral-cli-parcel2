@@ -21,7 +21,9 @@
   },
   "files": [
     "lib",
-    "src"
+    "src",
+    "pilet.config.json",
+    "piral.config.json"
   ],
   "funding": {
     "type": "github",
@@ -39,11 +41,12 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@parcel/transformer-sass": "^2.0.0",
+    "@parcel/core": "^2.2.1",
+    "@parcel/config-default": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
     "parcel-transformer-codegen": "^0.15.0"
   },
   "devDependencies": {
-    "@parcel/core": "^2.2.1",
     "@types/node": "^13.9.0",
     "@types/yargs": "^15.0.4",
     "piral-cli": "^0.14.9"

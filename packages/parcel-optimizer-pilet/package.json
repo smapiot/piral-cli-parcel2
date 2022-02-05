@@ -1,0 +1,47 @@
+{
+  "name": "parcel-optimizer-pilet",
+  "version": "0.15.0",
+  "description": "Adds support for outputting valid pilets in Parcel2",
+  "keywords": [
+    "parcel",
+    "optimizer",
+    "pilet",
+    "plugin"
+  ],
+  "author": "smapiot",
+  "homepage": "https://piral.io",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engine": {
+    "parcel": "2.x"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/smapiot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smapiot/piral-cli-parcel2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smapiot/piral-cli-parcel2/issues"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@parcel/utils": "^2.2.1",
+    "@parcel/source-map": "^2.0.2"
+  },
+  "devDependencies": {
+    "@parcel/plugin": "^2.0.0"
+  }
+}
