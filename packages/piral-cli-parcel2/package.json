@@ -44,7 +44,8 @@
     "@parcel/core": "^2.2.1",
     "@parcel/config-default": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
-    "parcel-transformer-codegen": "^0.15.0"
+    "parcel-transformer-codegen": "^0.15.0",
+    "parcel-optimizer-pilet": "^0.15.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",

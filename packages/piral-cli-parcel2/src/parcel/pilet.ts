@@ -9,6 +9,16 @@ const handler: PiletBuildHandler = {
     process.env.PILET_ENTRY = resolve(options.root, options.entryModule);
     process.env.PILET_IMPORTMAP = JSON.stringify(options.importmap);
 
+    const includeNodeModules = {};
+
+    options.externals.forEach((name) => {
+      includeNodeModules[name] = false;
+    });
+
+    options.importmap.forEach((dep) => {
+      includeNodeModules[dep.name] = false;
+    });
+
     const bundler = new Parcel({
       entries: options.entryModule,
       config: require.resolve('../../pilet.config.json'),
@@ -31,10 +41,7 @@ const handler: PiletBuildHandler = {
         module: {
           context: 'browser',
           outputFormat: 'esmodule',
-          includeNodeModules: options.externals.reduce((prev, name) => {
-            prev[name] = false;
-            return prev;
-          }, {}),
+          includeNodeModules,
           distDir: options.outDir,
           distEntry: options.outFile,
           isLibrary: true,
