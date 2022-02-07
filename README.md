@@ -15,13 +15,15 @@ The `piral-cli` plugin for using `parcel` (v2) as bundler.
     - [x] tsconfig changes
     - [x] Building
     - [x] Debugging
-- [ ] Piral instances (tested / working)
+    - [ ] Reloading (problem on every second turn)
+- [x] Piral instances (tested / working)
     - [x] Codegen
     - [x] HTML entry point
     - [x] Emulator build
     - [x] Release build
     - [x] tsconfig changes
-    - [ ] Debugging
+    - [x] Debugging
+    - [x] Reloading
 
 Piral instances require changes:
 

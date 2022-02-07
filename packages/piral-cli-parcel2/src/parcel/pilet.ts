@@ -39,7 +39,7 @@ function createBundler(options: BundlerOptions) {
     defaultTargetOptions: {
       shouldOptimize: options.minify,
       sourceMaps: options.sourceMaps,
-      shouldScopeHoist: true,
+      shouldScopeHoist: process.env.NODE_ENV === 'production',
       publicUrl: undefined,
       distDir: undefined,
     },

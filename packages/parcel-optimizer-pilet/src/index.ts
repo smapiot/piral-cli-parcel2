@@ -32,7 +32,8 @@ export default new Optimizer({
       ]);
     }
 
-    const code = await blobToString(contents);
+    const originalCode = await blobToString(contents);
+    const code = originalCode.split('parcelRequirebeee').join(requireRef);
 
     const result = await transformAsync(code, {
       sourceMaps: true,

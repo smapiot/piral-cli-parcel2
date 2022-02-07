@@ -25,20 +25,20 @@ const handler: PiralBuildHandler = {
         },
       ],
       defaultTargetOptions: {
-          shouldOptimize: options.minify,
-          sourceMaps: options.sourceMaps,
-          shouldScopeHoist: true,
-          publicUrl: options.publicUrl,
-          distDir: undefined,
+        shouldOptimize: options.minify,
+        sourceMaps: options.sourceMaps,
+        shouldScopeHoist: process.env.NODE_ENV === 'production',
+        publicUrl: options.publicUrl,
+        distDir: undefined,
       },
       targets: {
         app: {
           context: 'browser',
           outputFormat: 'commonjs',
-          distDir: options.outDir,
-          distEntry: options.outFile,
+          distDir: options.outDir || 'dist',
+          distEntry: options.outFile || 'index.html',
           isLibrary: false,
-        }
+        },
       },
       logLevel: getLevel(options.logLevel),
     });
