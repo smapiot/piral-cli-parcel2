@@ -39,7 +39,7 @@ function createBundler(options: BundlerOptions) {
     defaultTargetOptions: {
       shouldOptimize: options.minify,
       sourceMaps: options.sourceMaps,
-      shouldScopeHoist: process.env.NODE_ENV === 'production',
+      shouldScopeHoist: true, // otherwise does not seem to make esm as it should
       publicUrl: undefined,
       distDir: undefined,
     },
@@ -66,12 +66,18 @@ const handler: PiletBuildHandler = {
     const includeNodeModules = {};
     const sideBundlers: Array<Parcel> = [];
 
+    // first populate with global externals
     options.externals.forEach((name) => {
       includeNodeModules[name] = false;
     });
 
+    // then populate with distributed externals
     options.importmap.forEach((dep) => {
       includeNodeModules[dep.name] = false;
+    });
+
+    // for the distributed ones also fill the extra bundlers
+    options.importmap.forEach((dep) => {
       sideBundlers.push(
         createBundler({
           ...options,

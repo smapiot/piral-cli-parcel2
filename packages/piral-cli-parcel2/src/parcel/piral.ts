@@ -27,7 +27,6 @@ const handler: PiralBuildHandler = {
       defaultTargetOptions: {
         shouldOptimize: options.minify,
         sourceMaps: options.sourceMaps,
-        shouldScopeHoist: process.env.NODE_ENV === 'production',
         publicUrl: options.publicUrl,
         distDir: undefined,
       },
