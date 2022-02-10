@@ -1,6 +1,6 @@
+import SourceMap from '@parcel/source-map';
 import { Optimizer } from '@parcel/plugin';
 import { blobToString } from '@parcel/utils';
-import SourceMap from '@parcel/source-map';
 import { transformAsync } from '@babel/core';
 
 export default new Optimizer({
