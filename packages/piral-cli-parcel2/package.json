@@ -53,6 +53,6 @@
   "devDependencies": {
     "@types/node": "^13.9.0",
     "@types/yargs": "^15.0.4",
-    "piral-cli": "^0.14.9"
+    "piral-cli": "next"
   }
 }

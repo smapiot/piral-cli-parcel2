@@ -44,6 +44,6 @@
   },
   "devDependencies": {
     "@parcel/plugin": "^2.0.0",
-    "piral-cli": "^0.14.9"
+    "piral-cli": "next"
   }
 }
