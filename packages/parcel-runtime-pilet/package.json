@@ -1,6 +1,6 @@
 {
   "name": "parcel-runtime-pilet",
-  "version": "0.14.32",
+  "version": "0.15.0",
   "description": "Adds support for outputting valid pilets in Parcel2",
   "keywords": [
     "parcel",
@@ -35,7 +35,6 @@
   "scripts": {
     "build": "tsc"
   },
-  "dependencies": {},
   "devDependencies": {
     "@parcel/plugin": "^2.0.0"
   }
