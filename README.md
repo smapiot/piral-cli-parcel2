@@ -43,6 +43,12 @@ Piral instances require changes:
 
 1. `type="module"` in the `<script>` of *index.html*
 2. In the *package.json* we need to include `"@parcel/transformer-js": { "inlineEnvironment": true }`
+3. In the *package.json* we need to include `"@parcel/resolver-default": { "packageExports": true }`
+
+Pilets may also require changes:
+
+1. Centrally shared dependencies have to be in the `dependencies` - not the `devDependencies` (e.g., move `react` from `devDependencies` to `dependencies`)
+2. Parcel handles the JSX transform of React a bit different - you may need to configure `"jsxFactory": "React.createElement"` in the *tsconfig.json*
 
 ## License
 
