@@ -1,6 +1,6 @@
 {
   "name": "piral-cli-parcel2",
-  "version": "0.15.0",
+  "version": "1.0.0",
   "description": "Provides debug and build capabilities for pilets and Piral instances using Parcel v2.",
   "keywords": [
     "piral-cli",
@@ -46,9 +46,9 @@
     "@parcel/core": "^2.2.1",
     "@parcel/reporter-cli": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
-    "parcel-optimizer-pilet": "^0.15.0",
-    "parcel-runtime-pilet": "^0.15.0",
-    "parcel-transformer-codegen": "^0.15.0"
+    "parcel-optimizer-pilet": "^1.0.0",
+    "parcel-runtime-pilet": "^1.0.0",
+    "parcel-transformer-codegen": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",

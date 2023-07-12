@@ -1,6 +1,6 @@
 {
   "name": "parcel-runtime-pilet",
-  "version": "0.15.0",
+  "version": "1.0.0",
   "description": "Adds support for outputting valid pilets in Parcel2",
   "keywords": [
     "parcel",
