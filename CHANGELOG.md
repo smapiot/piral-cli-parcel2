@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 (tbd)
+## 1.0.0 (July 12, 2023)
 
 - Updated documentation for v1 of Piral
 
