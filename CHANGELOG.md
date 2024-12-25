@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 (tbd)
+
+- Use new codegen plugin
+
 ## 1.0.0 (July 12, 2023)
 
 - Updated documentation for v1 of Piral

@@ -17,7 +17,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "engines": {
-    "node": ">=12.0"
+    "node": ">=16.0"
   },
   "files": [
     "lib",
@@ -38,21 +38,20 @@
     "url": "https://github.com/smapiot/piral-cli-parcel2/issues"
   },
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsc"
   },
   "dependencies": {
-    "@parcel/config-default": "^2.2.1",
-    "@parcel/core": "^2.2.1",
-    "@parcel/reporter-cli": "^2.2.1",
-    "@parcel/transformer-sass": "^2.2.1",
+    "@parcel/config-default": "^2",
+    "@parcel/core": "^2",
+    "@parcel/reporter-cli": "^2",
+    "@parcel/transformer-sass": "^2",
     "parcel-optimizer-pilet": "^1.0.0",
     "parcel-runtime-pilet": "^1.0.0",
-    "parcel-transformer-codegen": "^1.0.0"
+    "parcel-transformer-codegen": "2.0.0-pre.2"
   },
   "devDependencies": {
-    "@types/node": "^13.9.0",
-    "@types/yargs": "^15.0.4",
-    "piral-cli": "next"
+    "@types/node": "^16",
+    "@types/yargs": "^17",
+    "piral-cli": "1.7.3"
   }
 }

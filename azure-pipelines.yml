@@ -47,9 +47,9 @@ stages:
       inputs:
         Arguments: setup
     - task: Yarn@2
-      displayName: Test Code
+      displayName: Test Build
       inputs:
-        Arguments: test
+        Arguments: build
 
 - stage: CanaryRelease
 

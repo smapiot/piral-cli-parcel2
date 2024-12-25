@@ -15,7 +15,7 @@
   "typings": "lib/index.d.ts",
   "engines": {
     "parcel": "2.x",
-    "node": ">=12.0"
+    "node": ">=16.0"
   },
   "funding": {
     "type": "github",
@@ -36,14 +36,14 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@parcel/source-map": "^2.0.2",
-    "@parcel/utils": "^2.2.1"
+    "@babel/cli": "^7",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@parcel/source-map": "^2",
+    "@parcel/utils": "^2"
   },
   "devDependencies": {
-    "@parcel/plugin": "^2.0.0",
-    "piral-cli": "next"
+    "@parcel/plugin": "^2",
+    "piral-cli": "1.7.3"
   }
 }
