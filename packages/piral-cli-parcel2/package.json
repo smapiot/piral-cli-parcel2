@@ -47,7 +47,7 @@
     "@parcel/transformer-sass": "^2",
     "parcel-optimizer-pilet": "^1.0.0",
     "parcel-runtime-pilet": "^1.0.0",
-    "parcel-transformer-codegen": "2.0.0-pre.2"
+    "parcel-transformer-codegen": "^2"
   },
   "devDependencies": {
     "@types/node": "^16",
