@@ -5609,10 +5609,10 @@ pacote@^15.0.0, pacote@^15.0.8:
     ssri "^10.0.0"
     tar "^6.1.11"
 
-parcel-transformer-codegen@2.0.0-pre.2:
-  version "2.0.0-pre.2"
-  resolved "https://registry.yarnpkg.com/parcel-transformer-codegen/-/parcel-transformer-codegen-2.0.0-pre.2.tgz#34f60e46c55256a812d78ca215c5bab833461390"
-  integrity sha512-aaFLwX6lzhIXblEUCOvrorbk+gFrA5r5HO4Kdrc6KR0B0F31OI2t0HRPGNaCln5iCmJ5AeSNjlQC8ILZ2gWwUw==
+parcel-transformer-codegen@^2:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/parcel-transformer-codegen/-/parcel-transformer-codegen-2.1.0.tgz#3505d4f2a8dc1a2ae036f5ebf76a350e3cfff0e0"
+  integrity sha512-BGGJUJ59IDiM21+5u3IraPb8FGl0pr9V1UzwaAOtXvbkStNado1YFrzjGFvsO5YrK0qk/jgybNxPJolF+1Wu6w==
 
 parent-module@^1.0.0:
   version "1.0.1"
